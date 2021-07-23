@@ -108,8 +108,4 @@ source - https://developer.mozilla.org/
 ### Character Escapes
 
 ## Author
-Zachary Krause
-
-5+ years DBA/ETL experience in e-discovery environment. Degree in Game design.
-
-[Github - ZacharyWK](https://github.com/ZacharyWK)
+Matthew St. Onge
