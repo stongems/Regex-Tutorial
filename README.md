@@ -99,12 +99,24 @@ Example, ```[a-z]``` Includes all lowercase letter a-z. ```[0-9]``` Includes all
 Example: ^I like ```(dogs|penguins)```, but not ```(lions|tigers)```$
 
 ## Flags
+Regular expressions have six optional flags that allow for functionality like global and case insensitive searching. These flags can be used separately or together in any order, and are included as part of the regular expression.
 
+```d``` - Generate indices for substring matches. <br>
+```g``` - Global search.<br>
+```i``` - Case-insensitive search.<br>
+```m``` - Multi-line search.<br>
+```s``` - Allows . to match newline characters.<br>
+```u``` - "unicode"; treat a pattern as a sequence of unicode code points.<br>
+```y``` - Perform a "sticky" search that matches starting at the current position in the target string.
+
+Example: re = /\w+\s/g creates a regular expression that looks for one or more characters followed by a space, and it looks for this combination throughout the string.
 
 ## Character Escapes
+```\``` - Will match literal instead of special character.
 
+Example: To search for the string ```/example/``` followed by one or more alphabetic characters, you'd use ```/\/example\/[a-z]+/i```
 
-### Sources
+## Sources
 source - https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial <br>
 source - https://developer.mozilla.org/ <br>
 source - http://web.mit.edu/gnu/doc/html/regex_3.html
