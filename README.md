@@ -74,30 +74,26 @@ Example, ```[a-z]``` Includes all lowercase letter a-z. ```[0-9]``` Includes all
 
 ### Character Classes
 
+**Character Class defines a set of characters.**
+```.``` - **Find a single character, except newline or line terminator** <br>
+```\w``` - Find a word character<br>
+```\W``` - **Find a non-word character**<br>
+```\d``` - Find a digit<br>
+```\D``` - **Find a non-digit character**<br>
+```\s``` - Find a whitespace character<br>
+```\S``` - **Find a non-whitespace character**<br>
+```\b``` - Find a match at the beginning/end of a word, beginning like this: \bHI, end like this: HI\b<br>
+```\B``` - **Find a match, but not at the beginning/end of a word**<br>
+```\0``` - Find a NULL character<br>
+```\n``` - **Find a new line character**<br>
+```\f``` - Find a form feed character<br>
+```\r``` - **Find a carriage return character**<br>
+```\t```- Find a tab character<br>
+```\v``` - **Find a vertical tab character**<br>
+```\xxx``` - Find the character specified by an octal number xxx<br>
+```\xdd``` - **Find the character specified by a hexadecimal number dd**<br>
+```\udddd``` - Find the Unicode character specified by a hexadecimal number dddd
 
-
----
-
-. - Find a single character, except newline or line terminator
-\w - Find a word character
-\W - Find a non-word character
-\d - Find a digit
-\D - Find a non-digit character
-\s - Find a whitespace character
-\S - Find a non-whitespace character
-\b - Find a match at the beginning/end of a word, beginning like this: \bHI, end like this: HI\b
-\B - Find a match, but not at the beginning/end of a word
-\0 - Find a NULL character
-\n - Find a new line character
-\f - Find a form feed character
-\r - Find a carriage return character
-\t - Find a tab character
-\v - Find a vertical tab character
-\xxx - Find the character specified by an octal number xxx
-\xdd - Find the character specified by a hexadecimal number dd
-\udddd - Find the Unicode character specified by a hexadecimal number dddd
-
-source - https://developer.mozilla.org/
 
 ---
 
