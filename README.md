@@ -1,6 +1,5 @@
 # Regex-Tutorial
-This tutorial breaks down an email regular expression. 
-I have selected an expression that allows you to match an email: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
+This tutorial breaks down the regular expressions. 
 
 ## Summary
 ```
@@ -23,13 +22,13 @@ I have selected an expression that allows you to match an email: `/^([a-z0-9_\.-
 
 ```/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/```
 
-### Anchors
+## Anchors
 
 The characters ```^``` and ```$``` are both considered anchors.
 The ```^``` character is used at the beginning to signify the start of a Regex string. While the ```$``` character, is used at the end to signifies the completion of the Regex.
 
 
-### Quantifiers
+## Quantifiers
 
 ```*``` — **Matches the pattern zero or more times.**
 
@@ -59,22 +58,22 @@ For example, ```/a{1,3}/``` matches nothing in "cndy", the "a" in "candy", the t
 
 ---
 
-### Grouping Constructs
+## Grouping Constructs
 
 ```()``` - **Way to group a section of Regex**
 
 What is inside the ```()``` is known as a sub-expression. Capturing groups matches the match character sequence for possible reuse. 
 
-### Bracket Expressions
+## Bracket Expressions
 
 ```[]``` - **Anything inside ```[]``` represents a range of characters that we want to match.**
 
 Example, ```[a-z]``` Includes all lowercase letter a-z. ```[0-9]``` Includes all numbers 0-9. ```[_-]``` Includes both _ and -
 
 
-### Character Classes
+## Character Classes
 
-**Character Class defines a set of characters.**
+**Character Class defines a set of characters.**<br>
 ```.``` - Find a single character, except newline or line terminator <br>
 ```\w``` - Find a word character<br>
 ```\W``` - Find a non-word character<br>
@@ -94,21 +93,21 @@ Example, ```[a-z]``` Includes all lowercase letter a-z. ```[0-9]``` Includes all
 ```\xdd``` - Find the character specified by a hexadecimal number dd<br>
 ```\udddd``` - Find the Unicode character specified by a hexadecimal number dddd
 
+## The OR Operator
+```|``` -  Can provide as many terms as desired, as long as they are separated with the pipe character.
 
----
+Example: ^I like ```(dogs|penguins)```, but not ```(lions|tigers)```$
 
-### The OR Operator
-
-
-### Flags
+## Flags
 
 
-### Character Escapes
+## Character Escapes
 
 
 ### Sources
 source - https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial <br>
-source - https://developer.mozilla.org/
+source - https://developer.mozilla.org/ <br>
+source - http://web.mit.edu/gnu/doc/html/regex_3.html
 
 ## Author
 Matthew St. Onge
