@@ -1,7 +1,5 @@
 # Regex-Tutorial
-# 20210716 Regex Gist
-
-Assigned to create a tutorial that explains a specific regular expression. 
+This tutorial breaks down an email regular expression. 
 I have selected an expression that allows you to match an email: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
 ## Summary
@@ -23,54 +21,56 @@ I have selected an expression that allows you to match an email: `/^([a-z0-9_\.-
 
 ## Regex Components
 
-`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
+```/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/```
 
 ### Anchors
 
+The characters ```^``` and ```$``` are both considered anchors.
+The ```^``` character is used at the beginning to signify the start of a Regex string. While the ```$``` character, is used at the end to signifies the completion of the Regex.
+
+
 ### Quantifiers
 
+```*``` — **Matches the pattern zero or more times.**
 
----
+For example, ```/bo*/``` matches "boo" in "A ghost booed" and "b" in "A bird babbled", but will not match anything in "A goat grunted".
 
-x*	
-Matches the preceding item "x" 0 or more times. For example, /bo*/ matches "boooo" in "A ghost booooed" and "b" in "A bird warbled", but nothing in "A goat grunted".
+```+``` — **Matches the pattern one or more times.**
 
-x+	
-Matches the preceding item "x" 1 or more times. Equivalent to {1,}. For example, /a+/ matches the "a" in "candy" and all the "a"'s in "caaaaaaandy".
+Equivalent to ```{1,}```. For example, ```/a+/``` matches the "a" in "candy" and all the "a"'s in "caaaandy".
 
-x?	
-Matches the preceding item "x" 0 or 1 times. For example, /e?le?/ matches the "el" in "angel" and the "le" in "angle."
+```?``` — **Matches the pattern zero or one time.**
 
-If used immediately after any of the quantifiers *, +, ?, or {}, makes the quantifier non-greedy (matching the minimum number of times), as opposed to the default, which is greedy (matching the maximum number of times).
+For example, ```/e?le?/``` matches the "el" in "angel" and the "le" in "angle." If used immediately after any of the quantifiers ```*, +, ?, or {}``` makes the quantifier non-greedy (matching the minimum number of times), as opposed to the default, which is greedy (matching the maximum number of times).
 
-x{n}	
-Where "n" is a positive integer, matches exactly "n" occurrences of the preceding item "x". For example, /a{2}/ doesn't match the "a" in "candy", but it matches all of the "a"'s in "caandy", and the first two "a"'s in "caaandy".
+```{}``` — **Curly brackets can provide three different ways to set limits for a match:* ```{ n } || { n, } || { n, x }```
 
-x{n,}	
-Where "n" is a positive integer, matches at least "n" occurrences of the preceding item "x". For example, /a{2,}/ doesn't match the "a" in "candy", but matches all of the a's in "caandy" and in "caaaaaaandy".
+```{ n }``` — **Matches the pattern exactly n number of times.**	
 
-x{n,m}	
-Where "n" is 0 or a positive integer, "m" is a positive integer, and m > n, matches at least "n" and at most "m" occurrences of the preceding item "x". For example, /a{1,3}/ matches nothing in "cndy", the "a" in "candy", the two "a"'s in "caandy", and the first three "a"'s in "caaaaaaandy". Notice that when matching "caaaaaaandy", the match is "aaa", even though the original string had more "a"s in it.
+For example, ```/a{2}/``` doesn't match the "a" in "candy", but it matches all of the "a"'s in "caandy", and the first two "a"'s in "caaandy".
 
-x*?
-x+?
-x??
-x{n}?
-x{n,}?
-x{n,m}?
+```{ n, }``` — **Matches the pattern at least n number of times.**
 
-By default quantifiers like * and + are "greedy", meaning that they try to match as much of the string as possible. The ? character after the quantifier makes the quantifier "non-greedy": meaning that it will stop as soon as it finds a match. For example, given a string like "some <foo> <bar> new </bar> </foo> thing":
+For example, ```/a{2,}/``` doesn't match the "a" in "candy", but matches all of the a's in "caandy" and in "caaaaaaandy".
 
-/<.*>/ will match "<foo> <bar> new </bar> </foo>"
-/<.*?>/ will match "<foo>"
+```{ n, x }``` — **Matches the pattern from a minimum of n number of times to a maximum of x number of times.**
 
-source - https://developer.mozilla.org/
+For example, ```/a{1,3}/``` matches nothing in "cndy", the "a" in "candy", the two "a"'s in "caandy", and the first three "a"'s in "caaaaaaandy". Notice that when matching "caaaaaaandy", the match is "aaa", even though the original string had more "a"s in it.
 
 ---
 
 ### Grouping Constructs
 
+```()``` - **Way to group a section of Regex**
+
+What is inside the ```()``` is known as a sub-expression. Capturing groups matches the match character sequence for possible reuse. 
+
 ### Bracket Expressions
+
+```[]``` - **Anything inside ```[]``` represents a range of characters that we want to match.**
+
+Example, ```[a-z]``` Includes all lowercase letter a-z. ```[0-9]``` Includes all numbers 0-9. ```[_-]``` Includes both _ and -
+
 
 ### Character Classes
 
@@ -103,9 +103,16 @@ source - https://developer.mozilla.org/
 
 ### The OR Operator
 
+
 ### Flags
 
+
 ### Character Escapes
+
+
+### Sources
+source - https://coding-boot-camp.github.io/full-stack/computer-science/regex-tutorial <br>
+source - https://developer.mozilla.org/
 
 ## Author
 Matthew St. Onge
